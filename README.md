@@ -1,4 +1,4 @@
-# ota_general
+# Introduction to OTA lab
 General information about the Over The Air (OTA) lab
 
 1. Hardware architecture
