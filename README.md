@@ -14,20 +14,31 @@ A micro computer with 4 cores and 4 GB memory, with an touch screen. Acts as rou
 The Pi 4 also acts as Central Unit, a proxy API handling requests from the joystick to diods and buzzers.
 The API is created in Python. Target is to be running as a docker (not working at the moment, some routing that does not work)
 
+Repository: https://github.com/algorythm-labs/ota_proxy_api
+
+
 Raspberry Pi Zero WH – ​Joystick handler
 A small single core micro computer with WiFi and header for pins.
 Running the simple small software that handles the connected joystick.
 In the current context the joystick handles up, down, right, left and push.
+
+Repository: https://github.com/algorythm-labs/ota_joystick
+
 
 Raspberry Pi Pico WH – ​Horn & blinkers
 A small microcontroller with built in WiFi and headers to expose pins, connected to a bread board.
 Purpose is to simulate horn & blinkers using a small piezo buzzer and to yellow diods.
 Running a simple webserver.
 
+Repository: https://github.com/algorythm-labs/ota_pico_horn_blinkers
+
+
 Raspberry Pi Pico WH – Accelerate & brakes
 A small microcontroller with built in WiFi and headers to expose pins, connected to a bread board.
 Purpose is to simulate acceleration with a green diod and brakes with a red diod.
 Running a simple webserver.
+
+Repository: https://github.com/algorythm-labs/ota_pico_accelerate_brake
 
 Both Pico's can can be running without USB connection to a computer, instead be connected to a powerbank. 
 
