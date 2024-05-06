@@ -1,21 +1,35 @@
 # ota_general
 General information about the Over The Air (OTA) lab
 
-1. Architecture
+1. Hardware architecture
+   
 ![Architecture](/architecture.jpg?raw=true "Architecture")
 
-3. Devices
-This lab contains a couple of simple devices from Raspberry.
-Pi4 - A micro computer with 4 cores and 4 GB memory, with an touch screen. Acts as router to create a dedicated network simulating a car.
-The Pi 4 also acts as Central Unit, a proxy API handling requests from the joystick to diods and buzzers.
+2. Details of devices
+Purpose with System A is do a simple simulation of parts of a car.
+All software is written in Python.
 
-Zero WH - A small single core micro computer. Running the simple small software that handles the connected joystick.
+Central unit - Raspberry PI4 - Proxy API
+A micro computer with 4 cores and 4 GB memory, with an touch screen. Acts as router to create a dedicated network simulating a car.
+The Pi 4 also acts as Central Unit, a proxy API handling requests from the joystick to diods and buzzers.
+The API is created in Python. Target is to be running as a docker (not working at the moment, some routing that does not work)
+
+Raspberry Pi Zero WH – ​Joystick handler
+A small single core micro computer with WiFi and header for pins.
+Running the simple small software that handles the connected joystick.
 In the current context the joystick handles up, down, right, left and push.
 
-Pico WH - Two small microcontrollers with built in Wifi. They can run C or MicroPython.
-In this setup the two Pico's are handling diods/lights for acceleration and brakes plus blinkers and the horn.
-They are placed on a simple breadboard and are running a small web webserver with a web API each.
-They can be running without USB connection to a computer, instead be connected to a powerbank. 
+Raspberry Pi Pico WH – ​Horn & blinkers
+A small microcontroller with built in WiFi and headers to expose pins, connected to a bread board.
+Purpose is to simulate horn & blinkers using a small piezo buzzer and to yellow diods.
+Running a simple webserver.
+
+Raspberry Pi Pico WH – Accelerate & brakes
+A small microcontroller with built in WiFi and headers to expose pins, connected to a bread board.
+Purpose is to simulate acceleration with a green diod and brakes with a red diod.
+Running a simple webserver.
+
+Both Pico's can can be running without USB connection to a computer, instead be connected to a powerbank. 
 
 
 Reset Raspberry Pico
